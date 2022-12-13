@@ -25,7 +25,7 @@ setInterval(slideshow, show);
 
 function PageTopAnime() {
   
-	var target = $(".first-view-text");
+	var target = $(".header-trigger");
 	var header = $(".header");
   var HEADER_HEIGHT = 96;
 	var el = target.offset().top - HEADER_HEIGHT;
