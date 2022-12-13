@@ -21,37 +21,55 @@
 <script>include_header();</script>
 <!-- /header -->
   <main>
-    <section class="container first-view">
-			<p class="first-view-text">Contact</p>
-			<div class="first-view-slider">
-				<img src="../img/fv-bgi_01@2x.jpg" alt="">
+    <section class="container contact-wrapper">
+			<div class="contact-wrapper-inner">
+				<p class="contact-wrapper-text">Contact</p>
 			</div>
+			<p class="contact-wrapper-bottom contact-bottom-title">Contact us</p>
 		</section>
     <section class="container">
-			<div class="">
-				<form action="#" method="post">
-					<p>お問い合わせ内容<br>
-						<input type="checkbox" name="document request" value="資料請求"> 資料請求
-						<input type="checkbox" name="telephone consultation" value="お電話でのご相談を希望"> お電話でのご相談を希望
-						<input type="checkbox" name="application" value="申し込み"> 申し込み
-					</p>
-					<p>担当者名<br>
-						<input type="text" name="name" autocomplete="name">
-					</p>
-					<p>電話番号<br>
-						<input type="tel" name="tel" autocomplete="tel"/>
-					</p>
-					<p>メールアドレス<br>
-						<input type="text" name="email" autocomplete="email">
-					</p>
-					<p>その他<br>
-						<textarea name="comment" cols="30" rows="5"></textarea>
-					</p>
-					<button class="btn btn-yellow" type="submit">Submit</button>
-				<form>
-			</div>
+			<form action="" class="form-wrapper" action="#" method="post">
+				<ul class="form-list">
+					<li class="form-item">
+						<label for="" class="form-label">お問い合わせ内容</label>
+						<ul class="checkbox-list">
+							<li class="checkbox-item">
+								<input type="checkbox" class="checkbox" name="contact-type" id="document" checked="">
+								<label for="document">資料請求</label>
+							</li>
+							<li class="checkbox-item">
+								<input class="checkbox" type="checkbox" name="contact-type" id="phone">
+								<label for="phone">お電話でのご相談を希望</label>
+							</li>
+							<li class="checkbox-item">
+								<input class="checkbox" type="checkbox" name="contact-type" id="application">
+								<label for="application">申し込み</label>
+							</li>
+						</ul>
+					</li>
+					<li class="form-item">
+						<label for="" class="form-label">担当者名</label>
+						<input type="text" class="input-text" name="name" autocomplete="name">
+					</li>
+					<li class="form-item">
+						<label for="" class="form-label">電話番号</label>
+						<input type="tel" class="input-text" name="tel" autocomplete="tel">
+					</li>
+					<li class="form-item">
+						<label for="" class="form-label">メールアドレス</label>
+						<input type="text" class="input-text" name="email" autocomplete="email">
+					</li>
+					<li class="form-item">
+						<label for="" class="form-label">その他</label>
+						<textarea name="comment" class="text-area" cols="30" rows="5"></textarea>
+
+					</li>
+				</ul>
+				<input type="submit" class="btn btn-yellow" value="Submit">
+			<form>
 		</section>
 	</main>
   <footer class="footer">©︎cresta.design all rights reserved</footer>
+	<script src="./js/main.js"></script>
 </body>
 </html>

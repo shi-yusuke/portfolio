@@ -4,6 +4,11 @@
 	scroll-behavior: smooth;
 }
 
+body,div,ul{
+	margin: 0;
+	padding: 0;
+}
+
 body {
   font-family: 'Noto Serif','Noto Serif JP','Noto Sans JP', sans-serif;
 }
@@ -325,3 +330,96 @@ img{
 	padding: 30px 0;
 }
 
+.contact-wrapper{
+	position: relative;
+	content: "";
+	width: 100%;
+	max-width: 1440px;
+	height: 453px;
+	background-image: url(./img/contact-page-bgi@2x.jpg);
+}
+
+.contact-wrapper-text{
+	font-size: 60px;
+	color: #fff;
+	display: block;
+}
+.contact-wrapper-inner{
+	height: inherit;
+	display: flex;
+	place-content: center;
+	place-items: center;
+}
+.contact-wrapper-bottom{
+	position: absolute;
+	font-size: 90px;
+	left: 48px;
+	bottom: 40px;
+}
+
+.form-wrapper{
+  padding: 100px 0 80px;
+}
+
+.form-list{
+	list-style: none;
+	max-width: 700px;
+	margin: 0 auto 80px;
+	padding: 0 50px;
+}
+.form-item{
+	margin-bottom: 25px;
+}
+.form-label{
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.checkbox-list{
+	list-style: none;
+	display: flex;
+}
+.checkbox-item{
+	padding-right: 20px;
+}
+
+.checkbox-item label{
+	cursor: pointer;
+}
+
+.checkbox{
+	border: #282f35 1px solid;
+	height: 10px;
+	width: 10px;
+	margin-right: 10px;
+}
+
+input,
+textarea{
+	resize: none;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	border: 1px solid #141414;
+	width: 100%;
+}
+
+.input-text{
+	color: #171717;
+  padding: 0px 8px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+.text-area{
+	height: 171px;
+  color: #171717;
+  padding: 0px 8px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+/* input{
+	width: 100%;
+	box-sizing: border-box;
+	height: 30px;
+} */
