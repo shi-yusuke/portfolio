@@ -3,7 +3,7 @@
 https://pengi-n.co.jp/blog/coding-practice2/
 
 制作時間
-30時間
+
 
 使用言語
 HTML
