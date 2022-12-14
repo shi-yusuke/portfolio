@@ -1,4 +1,10 @@
 
+const MenuContainer = document.querySelector('.header');    
+	MenuContainer.addEventListener('click', () => {
+    $(".hamburger").toggleClass('active');
+    $(".header-nav").toggleClass('active');
+	});
+
 const slider = $("#js-slider").find("img");
 const slideLength = slider.length;
 
