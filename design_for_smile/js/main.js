@@ -1,5 +1,5 @@
 
-const MenuContainer = document.querySelector('.header');    
+const MenuContainer = document.querySelector('.hamburger-trigger');    
 	MenuContainer.addEventListener('click', () => {
     $(".hamburger").toggleClass('active');
     $(".header-nav").toggleClass('active');
