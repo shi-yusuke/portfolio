@@ -29,6 +29,10 @@ img{
   width: 100%;
 }
 
+.d-none{
+	display: none;
+}
+
 .color-white{
 	color: #fff;
 }
@@ -38,7 +42,7 @@ img{
   max-width: 1440px;
 	margin: 0 auto;
 }
-.sub-container{
+.second-container{
 	width: 100%;
   max-width: 1200px;
 	margin: 0 auto;
@@ -124,7 +128,7 @@ img{
 .first-view-text{
 	position: absolute;
 	z-index: 100;
-	bottom: 10%;
+	top: 70%;
 	left: 5%;
 	font-size: 7rem;
 	color: #fff;
@@ -234,23 +238,22 @@ img{
 
 .concept-block{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .concept-block-text{
-	width: 100%;
-	max-width: 440px;
+	width: 50%;
 	font-size: 1.6rem;
-	padding: 0 18px;
 	text-align: justify;
 }
 
 .concept-block-image{
-	width: 100%;
-	max-width: 440px;
+	width: 50%;
+	padding-left: 20px;
 }
 
 .works-cords{
@@ -273,6 +276,8 @@ img{
 
 .works-cord-text{
 	padding: 20px 25px;
+	font-size: 1.6rem;
+
 }
 
 .service-cards{
@@ -436,6 +441,10 @@ textarea{
 }
 
 @media screen and (max-width:834px) { 
+	.d-sp-block{
+		display: block;
+	}
+
 	.hamburger{
 		margin-right: 4vw;
 		z-index: 100;
@@ -595,8 +604,17 @@ textarea{
 		color: #fff;
 		text-align: center;
 		line-height: 65px; */
+		font-size: 9.8vw;
+		line-height: 15vw;
+		font-weight: bold;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 	.first-view-text span{
+		font-size: 8vw;
+		line-height: 7vw;
 		/* font-size: 4rem;
 		color: #fff; */
 	}
@@ -608,6 +626,7 @@ textarea{
 		height: 100vw;
 		max-height: 752px;
 		overflow: hidden */
+		min-height: 600px;
 	}
 	
 	.first-view-slider img{
@@ -632,6 +651,8 @@ textarea{
 		/* position: relative;
 		font-size: 60px;
 		padding-bottom: 80px; */
+		font-size: 3rem;
+		font-style: italic;
 	}
 	.concept-header:after,
 	.works-header::after,
@@ -643,6 +664,7 @@ textarea{
 		height: 5px;
 		margin-left: 30px;
 		top: 29%; */
+		width: 30vw;
 	}
 	
 	.concept-header:after,
@@ -658,6 +680,7 @@ textarea{
 	.service-header,
 	.concept-header{
 		/* margin-left: 100px; */
+		margin-left: 4vw;
 	}
 	
 	.works-header,
@@ -684,6 +707,7 @@ textarea{
 		color: #818181;
 		opacity: 0.2;
 		line-height:normal; */
+		font-size: 10vw;
 	}
 	
 	.concept-bottom-title,
@@ -703,6 +727,7 @@ textarea{
 		align-items: center;
 		max-width: 1000px;
 		margin: 0 auto; */
+		display: block;
 	}
 	
 	.concept-block-text{
@@ -722,6 +747,8 @@ textarea{
 		/* display: flex;
 		justify-content: center;
 		padding-bottom: 80px; */
+		display: block;
+		padding: auto 20px;
 	}
 	.works-cord{
 		/* max-width: 320px;
@@ -730,6 +757,8 @@ textarea{
 		margin: 0 20px;
 		flex-wrap: wrap;
 		background-color: #fff; */
+		max-width: 100%;
+		margin: 0 auto 20px;
 	}
 	
 	.works-cord-image{
@@ -744,10 +773,14 @@ textarea{
 		/* max-width: 1440px;
 		display: flex;
 		margin: 0 auto; */
+		display: block;
+		
 	}
 	.service-card{
 		/* width: 100%;
 		max-width: 480px; */
+		margin: 0 auto;
+		padding-bottom: 30px;
 	}
 	.service-card-link{
 		/* position: relative;
