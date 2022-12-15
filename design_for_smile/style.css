@@ -441,6 +441,7 @@ textarea{
 }
 
 @media screen and (max-width:834px) { 
+
 	.d-sp-block{
 		display: block;
 	}
@@ -653,6 +654,7 @@ textarea{
 		padding-bottom: 80px; */
 		font-size: 3rem;
 		font-style: italic;
+		padding-bottom: 50px;
 	}
 	.concept-header:after,
 	.works-header::after,
@@ -688,6 +690,7 @@ textarea{
 		/* padding-right: 230px;
 		text-align: end;
 		color: #fff; */
+		padding-right: 160px;
 	}
 	
 	.concept,
@@ -696,6 +699,7 @@ textarea{
 	.contact{
 		/* margin: 0 auto;
 		padding: 100px 0 70px; */
+		padding-bottom: 40px;
 	}
 	
 	.concept-bottom-title,
@@ -708,6 +712,8 @@ textarea{
 		opacity: 0.2;
 		line-height:normal; */
 		font-size: 10vw;
+		padding-top: 30px;
+		margin-left: 4vw;
 	}
 	
 	.concept-bottom-title,
@@ -719,6 +725,10 @@ textarea{
 		/* font-size: 3rem;
 		text-align: center;
 		padding-bottom: 60px; */
+		font-size: 2rem;
+		font-weight: bold;
+		line-height: 1.67;
+		padding-bottom: 32px;
 	}
 	
 	.concept-block{
@@ -736,11 +746,16 @@ textarea{
 		font-size: 1.6rem;
 		padding: 0 18px;
 		text-align: justify; */
+		width: 100%;
+		font-weight: bold;
+		padding-bottom: 30px;
 	}
 	
 	.concept-block-image{
 		/* width: 100%;
 		max-width: 440px; */
+		width: 100%;
+		padding: 0;
 	}
 	
 	.works-cords{
@@ -748,7 +763,7 @@ textarea{
 		justify-content: center;
 		padding-bottom: 80px; */
 		display: block;
-		padding: auto 20px;
+		padding: 0 20px 50px;
 	}
 	.works-cord{
 		/* max-width: 320px;
@@ -758,7 +773,7 @@ textarea{
 		flex-wrap: wrap;
 		background-color: #fff; */
 		max-width: 100%;
-		margin: 0 auto 20px;
+		margin: 0 auto 30px;
 	}
 	
 	.works-cord-image{
