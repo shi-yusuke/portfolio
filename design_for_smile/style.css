@@ -170,6 +170,7 @@ img{
 .contact-header{
 	position: relative;
 	font-size: 60px;
+	font-style: italic;
 	padding-bottom: 80px;
 }
 .concept-header:after,
@@ -223,6 +224,7 @@ img{
 	color: #818181;
 	opacity: 0.2;
 	line-height:normal;
+	font-style: italic;
 }
 
 .concept-bottom-title,
@@ -297,6 +299,7 @@ img{
 	width: 100%;
 	aspect-ratio: 3/2;
 	font-size: 4rem;
+	font-style: italic;
 	color: #fff; 
 }
 
@@ -653,7 +656,6 @@ textarea{
 		font-size: 60px;
 		padding-bottom: 80px; */
 		font-size: 3rem;
-		font-style: italic;
 		padding-bottom: 50px;
 	}
 	.concept-header:after,
@@ -692,7 +694,7 @@ textarea{
 		/* padding-right: 230px;
 		text-align: end;
 		color: #fff; */
-		padding-right: 160px;
+		padding-right: 150px;
 	}
 	
 	.concept,
@@ -899,6 +901,7 @@ textarea{
 		display: block;
 		margin-bottom: 5px;
 		font-weight: bold; */
+		margin-bottom: 10px;
 	}
 	
 	.checkbox-list{
@@ -909,6 +912,7 @@ textarea{
 	}
 	.checkbox-item{
 		/* padding-right: 20px; */
+		padding-bottom: 8px;
 	}
 	
 	.checkbox-item label{
