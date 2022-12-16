@@ -1,10 +1,15 @@
 
+/*スマホ :hover 対策*/
+$('body')[0].setAttribute('ontouchstart', '');
+
+/*ハンバーガーメニュー 処理*/
 const MenuContainer = document.querySelector('.hamburger-trigger');    
 	MenuContainer.addEventListener('click', () => {
     $(".hamburger").toggleClass('active');
     $(".header-nav").toggleClass('active');
 	});
 
+/*スライドショー (フェードイン・アウト) 処理*/
 const slider = $("#js-slider").find("img");
 const slideLength = slider.length;
 
@@ -28,7 +33,7 @@ const slideshow = () => {
 
 setInterval(slideshow, show);
 
-
+/*ヘッダー表示切り替え アニメーション処理*/
 function PageTopAnime() {
   
 	var target = $(".js-header-trigger");

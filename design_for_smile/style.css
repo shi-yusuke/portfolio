@@ -1,28 +1,11 @@
-*{
-	color: #000;
-	margin: 0;
-	scroll-behavior: smooth;
-}
 
 html{
 	font-size: 62.5%;
-}
-
-body,div,ul{
-	margin: 0;
-	padding: 0;
+	scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Noto Serif','Noto Serif JP','Noto Sans JP', sans-serif;
-}
-
-a{
-	text-decoration: none;
-}
-
-p{
-	line-height: 28px;
 }
 
 img{
@@ -33,21 +16,41 @@ img{
 	display: none;
 }
 
-.color-white{
-	color: #fff;
+/* ボタンパーツ */
+.btn{
+	display: block;
+	width: fit-content;
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 19px 20px;
+	border-radius: 50px;
+	background-color: #fff;
+	min-width: 235px;
+	margin: 0 auto;
 }
 
+.btn:hover{
+	opacity: 0.7;
+}
+
+.btn-yellow{
+	background-color: #F7D43F;
+}
+
+/* ページコンテナ */
 .container{
 	width: 100%;
   max-width: 1440px;
 	margin: 0 auto;
 }
+
 .second-container{
 	width: 100%;
   max-width: 1200px;
 	margin: 0 auto;
 }
 
+/* ヘッダー セクション*/
 .header{
 	margin: 0 auto;
 	height: 96px;
@@ -67,33 +70,16 @@ img{
   transition: 1000ms;
 }
 
-.bk-works{
-	content: "";
-	width: 100%;
-	max-width: 1440px;
-	height: 100%;
-	background-image: url(./img/works-bgi@2x.jpg);
-}
-.bk-contact{
-	content: "";
-	width: 100%;
-	max-width: 1440px;
-	height: 100%;
-	background-image: url(./img/contact-bgi@2x.jpg);
-}
-
-.hamburger{
-	display: none;
-}
-
 .header-logo{
 	padding: 0 20px;
 	margin-left: 4vw;
 }
+
 .header-logo a{
 	display: block;
 	padding: 5px;
 }
+
 .header-nav{
 	padding: 0 20px;
 	margin-right: 4vw;
@@ -105,14 +91,13 @@ img{
 }
 
 .header-nav-item{
-	text-decoration: none;
-	color: #fff;
 	font-size: 16px;
 }
 
 .header-nav-link{
 	display: block;
 	padding: 0 15px;
+	text-decoration: none;
 	color: #fff;
 }
 
@@ -120,6 +105,11 @@ img{
 	color: #F7D43F;
 }
 
+.hamburger{
+	display: none;
+}
+
+/* ファーストビュー セクション*/
 .first-view{
 	position: relative;
 	z-index: -1;
@@ -135,6 +125,7 @@ img{
 	text-align: center;
 	line-height: 65px;
 }
+
 .first-view-text span{
 	font-size: 4rem;
 	color: #fff;
@@ -164,6 +155,32 @@ img{
 	transform: scale(1.05);
 }
 
+/* セクション背景 */
+.bk-works{
+	content: "";
+	width: 100%;
+	max-width: 1440px;
+	height: 100%;
+	background-image: url(./img/works-bgi@2x.jpg);
+}
+
+.bk-contact{
+	content: "";
+	width: 100%;
+	max-width: 1440px;
+	height: 100%;
+	background-image: url(./img/contact-bgi@2x.jpg);
+}
+
+/* 共通セクション */
+.concept,
+.works,
+.service,
+.contact{
+	margin: 0 auto;
+	padding: 100px 0 70px;
+}
+
 .concept-header,
 .works-header,
 .service-header,
@@ -173,6 +190,7 @@ img{
 	font-style: italic;
 	padding-bottom: 80px;
 }
+
 .concept-header:after,
 .works-header::after,
 .service-header::after,
@@ -207,14 +225,6 @@ img{
 	color: #fff;
 }
 
-.concept,
-.works,
-.service,
-.contact{
-	margin: 0 auto;
-	padding: 100px 0 70px;
-}
-
 .concept-bottom-title,
 .works-bottom-title,
 .service-bottom-title,
@@ -232,8 +242,11 @@ img{
 	text-align: end;
 }
 
+/* concept セクション */
 .concept-sub-header{
 	font-size: 3rem;
+	font-weight: bold;
+	line-height: 1.67;
 	text-align: center;
 	padding-bottom: 60px;
 }
@@ -250,6 +263,7 @@ img{
 .concept-block-text{
 	width: 50%;
 	font-size: 1.6rem;
+	line-height: 1.875;
 	text-align: justify;
 }
 
@@ -258,11 +272,13 @@ img{
 	padding-left: 20px;
 }
 
+/* works セクション */
 .works-cords{
 	display: flex;
 	justify-content: center;
 	padding-bottom: 80px;
 }
+
 .works-cord{
 	max-width: 320px;
 	width: 100%;
@@ -272,6 +288,10 @@ img{
 	background-color: #fff;
 }
 
+.works-cord-link{
+	text-decoration: none;
+}
+
 .works-cord-image{
 	vertical-align: bottom;
 }
@@ -279,18 +299,21 @@ img{
 .works-cord-text{
 	padding: 20px 25px;
 	font-size: 1.6rem;
-
+	line-height: 1.875;
 }
 
+/* service セクション */
 .service-cards{
 	max-width: 1440px;
 	display: flex;
 	margin: 0 auto;
 }
+
 .service-card{
 	width: 100%;
 	max-width: 480px;
 }
+
 .service-card-link{
 	position: relative;
 	display: flex;
@@ -300,7 +323,9 @@ img{
 	aspect-ratio: 3/2;
 	font-size: 4rem;
 	font-style: italic;
+	text-decoration: none;
 	color: #fff; 
+	transition: 0.6s ;
 }
 
 .service-card-link:hover{
@@ -314,6 +339,7 @@ img{
 	height: auto;
 }
 
+/* contact セクション*/
 .contact-text{
 	color: #fff;
 	font-size: 2rem;
@@ -321,31 +347,19 @@ img{
 	padding-bottom: 40px;
 }
 
-.btn{
-	display: block;
-	width: fit-content;
-	text-align: center;
-	font-size: 1.6rem;
-	padding: 19px 20px;
-	border-radius: 50px;
-	background-color: #fff;
-	min-width: 235px;
-	margin: 0 auto;
-}
-
-.btn:hover{
-	opacity: 0.7;
-}
-.btn-yellow{
-	background-color: #F7D43F;
-}
-
+/* footer セクション*/
 .footer{
 	background-color: #fff;
 	text-align: center;
 	padding: 30px 0;
 }
 
+
+/*-----------------
+- contact ページ 
+------------------ */
+
+/* contact トップ*/
 .contact-wrapper{
 	position: relative;
 	content: "";
@@ -361,12 +375,14 @@ img{
 	color: #fff;
 	display: block;
 }
+
 .contact-wrapper-inner{
 	height: inherit;
 	display: flex;
 	place-content: center;
 	place-items: center;
 }
+
 .contact-wrapper-bottom{
 	position: absolute;
 	font-size: 90px;
@@ -374,6 +390,7 @@ img{
 	bottom: 40px;
 }
 
+/* 入力フォーム */
 .form-wrapper{
   padding: 100px 0 80px;
 }
@@ -384,9 +401,11 @@ img{
 	margin: 0 auto 80px;
 	padding: 0 50px;
 }
+
 .form-item{
 	margin-bottom: 25px;
 }
+
 .form-label{
 	font-size: 1.6rem;
 	display: block;
@@ -399,6 +418,7 @@ img{
 	list-style: none;
 	display: flex;
 }
+
 .checkbox-item{
 	padding-right: 20px;
 }
@@ -414,6 +434,10 @@ img{
 	margin-right: 10px;
 }
 
+.checkbox:checked{
+	background-color: #141414;
+}
+
 input,
 textarea{
 	resize: none;
@@ -426,16 +450,13 @@ textarea{
 	width: 100%;
 }
 
-.checkbox:checked{
-	background-color: #141414;
-}
-
 .input-text{
 	color: #171717;
   padding: 0px 8px;
   line-height: 30px;
   box-sizing: border-box;
 }
+
 .text-area{
 	height: 171px;
   color: #171717;
@@ -450,101 +471,11 @@ textarea{
 		display: block;
 	}
 
-	.hamburger{
-		margin-right: 4vw;
-		z-index: 100;
-		display: block;
-		position: relative;
-		cursor: pointer;
-		width: 50px;
-    height:50px;
-		background-color: transparent;
-    border: none;
-    outline: none;
-    appearance: none;
-
-	}
-	
-	.hamburger span{
-		display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-		background: #fff;
-    width: 45%;
-	}
-
-	.hamburger span:nth-of-type(1){
-		top:15px;
-	}
-	.hamburger span:nth-of-type(2){
-		top:23px;
-	}
-	.hamburger span:nth-of-type(3){
-		top:31px;
-	}
-
-	.hamburger.active span:nth-of-type(1){
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-	}
-	.hamburger.active span:nth-of-type(2){
-		opacity: 0;
-	}
-	.hamburger.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-	}
-
-	.header{
-		/* margin: 0 auto;
-		height: 96px;
-		width: 100%;
-		max-width: 1440px;
-		position: fixed;
-		z-index: 100;
-		left: 0;
-		right: 0;
-		display: flex;
-		align-items: center;
-		justify-content: space-between; */
-	}
-	
-	.header.active{
-		/* background-color: #161a1ddf;
-		transition: 1000ms; */
-	}
-	
-	.bk-works{
-		/* content: "";
-		width: 100%;
-		max-width: 1440px;
-		height: 100%;
-		background-image: url(./img/works-bgi@2x.jpg); */
-	}
-	.bk-contact{
-		/* content: "";
-		width: 100%;
-		max-width: 1440px;
-		height: 100%;
-		background-image: url(./img/contact-bgi@2x.jpg); */
-	}
+	/* ヘッダー セクション*/
 	.header-logo{
-		/* padding: 0 20px;
-		margin-left: 100px; */
-		/* margin-left: 100px; */
 		padding: 0;
 	}
-	.header-logo a{
-		/* display: block;
-		padding: 5px; */
-	}
+
 	.header-nav{
     position: fixed;
 		transition: 0.2s ease-in-out;
@@ -561,55 +492,80 @@ textarea{
 	}
 	
 	.header-nav-list{
-		/* display: flex;
-		list-style: none;
-		margin-right: 100px; */
 		display: block;
 		margin-top: 80px;
 	}
 	
 	.header-nav-item{
-		/* text-decoration: none;
-		color: #fff;
-		font-size: 16px; */
 		font-size: 24px;
 		text-align: center;
-	}
-	.header-nav-item{
-		/* text-decoration: none;
-		color: #fff;
-		font-size: 16px; */
 	}
 	
 	.header-nav-link{
 		padding: 24px 0;
 	}
 	.header-nav-link:hover{
-		/* display: block;
-		padding: 0 15px;
-		color: #fff; */
 		background-color: #4f4f4f1e;
 		display: block;
 	}
 	
-	.header-nav-link:hover{
-		/* color: #F7D43F; */
-	}
-	
-	.first-view{
-		/* position: relative;
-		z-index: -1; */
-	}
-	
-	.first-view-text{
-		/* position: absolute;
+	.hamburger{
+		margin-right: 4vw;
 		z-index: 100;
-		bottom: 10%;
-		left: 5%;
-		font-size: 7rem;
-		color: #fff;
-		text-align: center;
-		line-height: 65px; */
+		display: block;
+		position: relative;
+		cursor: pointer;
+		width: 50px;
+    height:50px;
+		background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+	}
+	
+	.hamburger span{
+		display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+		background: #fff;
+    width: 45%;
+	}
+
+	.hamburger span:nth-of-type(1){
+		top:15px;
+	}
+
+	.hamburger span:nth-of-type(2){
+		top:23px;
+	}
+
+	.hamburger span:nth-of-type(3){
+		top:31px;
+	}
+
+	.hamburger.active span:nth-of-type(1){
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+	}
+
+	.hamburger.active span:nth-of-type(2){
+		opacity: 0;
+	}
+
+	.hamburger.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+	}
+
+	/* ファーストビュー セクション*/
+	.first-view-text{
 		font-size: 9.8vw;
 		line-height: 15vw;
 		font-weight: bold;
@@ -621,81 +577,38 @@ textarea{
 	.first-view-text span{
 		font-size: 8vw;
 		line-height: 7vw;
-		/* font-size: 4rem;
-		color: #fff; */
 	}
 	
 	.first-view-slider{
-		/* list-style: none;
-		position: relative;
-		max-width: 1440px;
-		height: 100vw;
-		max-height: 752px;
-		overflow: hidden */
 		min-height: 600px;
 	}
 	
-	.first-view-slider img{
-		/* position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		transition: 4s linear transform .4s;
-		object-fit: cover; */
-	}
-	
-	.first-view-slider .zoom{
-		/* transform: scale(1.05); */
-	}
-	
+	/* 共通セクション */
 	.concept-header,
 	.works-header,
 	.service-header,
 	.contact-header{
-		/* position: relative;
-		font-size: 60px;
-		padding-bottom: 80px; */
 		font-size: 3rem;
 		padding-bottom: 50px;
 	}
+
 	.concept-header:after,
 	.works-header::after,
 	.service-header::after,
 	.contact-header::after{
-		/* position: absolute;
-		content: "";
-		width: 200px;
-		height: 5px;
-		margin-left: 30px;
-		top: 29%; */
 		width: 30vw;
-		top: 24%;
+		height: 4px;
+		top: 20%;
 		width: 100px;
-	}
-	
-	.concept-header:after,
-	.service-header::after{
-		/* background-color: #000; */
-	}
-	
-	.works-header::after,
-	.contact-header::after{
-		/* background-color: #fff; */
 	}
 	
 	.service-header,
 	.concept-header{
-		/* margin-left: 100px; */
 		margin-left: 4vw;
 	}
 	
 	.works-header,
 	.contact-header{
-		/* padding-right: 230px;
-		text-align: end;
-		color: #fff; */
 		padding-right: 150px;
 	}
 	
@@ -703,8 +616,6 @@ textarea{
 	.works,
 	.service,
 	.contact{
-		/* margin: 0 auto;
-		padding: 100px 0 70px; */
 		padding-bottom: 40px;
 	}
 	
@@ -712,25 +623,13 @@ textarea{
 	.works-bottom-title,
 	.service-bottom-title,
 	.contact-bottom-title{
-		/* font-size: 9rem;
-		padding-top: 70px;
-		color: #818181;
-		opacity: 0.2;
-		line-height:normal; */
 		font-size: 10vw;
 		padding-top: 30px;
 		margin:0 4vw;
 	}
 	
-	.concept-bottom-title,
-	.service-bottom-title{
-		/* text-align: end; */
-	}
-	
+	/* concept セクション */
 	.concept-sub-header{
-		/* font-size: 3rem;
-		text-align: center;
-		padding-bottom: 60px; */
 		font-size: 2rem;
 		font-weight: bold;
 		line-height: 1.67;
@@ -738,223 +637,64 @@ textarea{
 	}
 	
 	.concept-block{
-		/* display: flex;
-		justify-content: space-around;
-		align-items: center;
-		max-width: 1000px;
-		margin: 0 auto; */
 		display: block;
+		max-width: 380px;
 	}
 	
 	.concept-block-text{
-		/* width: 100%;
-		max-width: 440px;
-		font-size: 1.6rem;
-		padding: 0 18px;
-		text-align: justify; */
 		width: 100%;
 		font-weight: bold;
 		padding-bottom: 30px;
 	}
 	
 	.concept-block-image{
-		/* width: 100%;
-		max-width: 440px; */
 		width: 100%;
 		padding: 0;
 	}
 	
+	/* works セクション */
 	.works-cords{
-		/* display: flex;
-		justify-content: center;
-		padding-bottom: 80px; */
 		display: block;
-		padding: 0 20px 50px;
+		padding:0 20px 50px;
 	}
+
 	.works-cord{
-		/* max-width: 320px;
-		width: 100%;
-		height: auto;
-		margin: 0 20px;
-		flex-wrap: wrap;
-		background-color: #fff; */
-		max-width: 100%;
+		max-width: 380px;
 		margin: 0 auto 30px;
 	}
 	
-	.works-cord-image{
-		/* vertical-align: bottom; */
-	}
-	
-	.works-cord-text{
-		/* padding: 20px 25px; */
-	}
-	
+	/* service セクション */
 	.service-cards{
-		/* max-width: 1440px;
-		display: flex;
-		margin: 0 auto; */
 		display: block;
 		padding: 0 20px;		
 	}
+
 	.service-card{
-		/* width: 100%;
-		max-width: 480px; */
 		margin: 0 auto;
 		padding-bottom: 30px;
 	}
+	
 	.service-card-link{
-		/* position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		aspect-ratio: 3/2;
-		font-size: 4rem;
-		color: #fff;  */
+		max-width: 380px;
+		margin: 0 auto;
 	}
 	
-	.service-card-link:hover{
-		/* background-color: #282F35c9; */
-	}
-	
-	.service-card-image{
-		/* position: absolute;
-		z-index: -100;
-		width: 100%;
-		height: auto; */
-	}
-	
-	.contact-text{
-		/* color: #fff;
-		font-size: 2rem;
-		text-align: center;
-		padding-bottom: 40px; */
-	}
-	
-	.btn{
-		/* display: block;
-		width: fit-content;
-		text-align: center;
-		font-size: 1.6rem;
-		padding: 19px 20px;
-		border-radius: 50px;
-		background-color: #fff;
-		min-width: 235px;
-		margin: 0 auto; */
-	}
-	
-	.btn:hover{
-		/* opacity: 0.7; */
-	}
-	.btn-yellow{
-		/* background-color: #F7D43F; */
-	}
-	
-	.footer{
-		/* background-color: #fff;
-		text-align: center;
-		padding: 30px 0; */
-	}
-	
-	.contact-wrapper{
-		/* position: relative;
-		content: "";
-		width: 100%;
-		max-width: 1440px;
-		height: 453px;
-		background-image: url(./img/contact-page-bgi@2x.jpg); */
-	}
-	
-	.contact-wrapper-text{
-		/* font-size: 6rem;
-		color: #fff;
-		display: block; */
-	}
-	.contact-wrapper-inner{
-		/* height: inherit;
-		display: flex;
-		place-content: center;
-		place-items: center; */
-	}
+	/*-----------------
+	- contact ページ 
+	------------------ */
 	.contact-wrapper-bottom{
-		/* position: absolute;
-		font-size: 90px;
-		left: 48px;
-		bottom: 40px; */
 		left: 0;
 	}
-	
-	.form-wrapper{
-		/* padding: 100px 0 80px; */
-	}
-	
-	.form-list{
-		/* list-style: none;
-		max-width: 700px;
-		margin: 0 auto 80px;
-		padding: 0 50px; */
-	}
-	.form-item{
-		/* margin-bottom: 25px; */
-	}
+
+	/* 入力フォーム */
 	.form-label{
-		/* font-size: 1.6rem;
-		display: block;
-		margin-bottom: 5px;
-		font-weight: bold; */
 		margin-bottom: 10px;
 	}
-	
+
 	.checkbox-list{
-		/* font-size: 1.6rem;
-		list-style: none;
-		display: flex; */
 		display: block;
 	}
 	.checkbox-item{
-		/* padding-right: 20px; */
 		padding-bottom: 8px;
-	}
-	
-	.checkbox-item label{
-		/* cursor: pointer; */
-	}
-	
-	.checkbox{
-		/* border: #282f35 1px solid;
-		height: 10px;
-		width: 10px;
-		margin-right: 10px; */
-	}
-	
-	input,
-	textarea{
-		/* resize: none;
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-o-appearance: none;
-		outline: none;
-		border: 1px solid #141414;
-		width: 100%; */
-	}
-	
-	.checkbox:checked{
-		/* background-color: #141414; */
-	}
-	
-	.input-text{
-		/* color: #171717;
-		padding: 0px 8px;
-		line-height: 30px;
-		box-sizing: border-box; */
-	}
-	.text-area{
-		/* height: 171px;
-		color: #171717;
-		padding: 0px 8px;
-		line-height: 30px;
-		box-sizing: border-box; */
 	}
 }
