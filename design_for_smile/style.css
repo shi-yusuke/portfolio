@@ -27,6 +27,8 @@ img{
 	background-color: #fff;
 	min-width: 235px;
 	margin: 0 auto;
+	color: #000;
+	text-decoration: none;
 }
 
 .btn:hover{
