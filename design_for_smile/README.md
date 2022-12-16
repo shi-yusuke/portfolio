@@ -33,5 +33,5 @@ jQueryアニメーションの学習<br>
 スムーススクロールを実装し、移動距離を視覚的に感じる事で、
 ページ内の場所認識を行いやすいようにした。
 
-▼ 作成ページURL
+▼ 作成ページURL<br>
 https://shi-yusuke.github.io/portfolio/design_for_smile/index.html
