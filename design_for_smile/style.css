@@ -667,6 +667,8 @@ textarea{
 		margin-left: 30px;
 		top: 29%; */
 		width: 30vw;
+		top: 24%;
+		width: 100px;
 	}
 	
 	.concept-header:after,
@@ -713,7 +715,7 @@ textarea{
 		line-height:normal; */
 		font-size: 10vw;
 		padding-top: 30px;
-		margin-left: 4vw;
+		margin:0 4vw;
 	}
 	
 	.concept-bottom-title,
@@ -789,7 +791,7 @@ textarea{
 		display: flex;
 		margin: 0 auto; */
 		display: block;
-		
+		padding: 0 20px;		
 	}
 	.service-card{
 		/* width: 100%;
@@ -876,6 +878,7 @@ textarea{
 		font-size: 90px;
 		left: 48px;
 		bottom: 40px; */
+		left: 0;
 	}
 	
 	.form-wrapper{
@@ -902,6 +905,7 @@ textarea{
 		/* font-size: 1.6rem;
 		list-style: none;
 		display: flex; */
+		display: block;
 	}
 	.checkbox-item{
 		/* padding-right: 20px; */
