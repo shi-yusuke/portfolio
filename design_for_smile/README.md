@@ -17,7 +17,7 @@ jQuery<br>
 レスポンシブコーディング<br>
 ハンバーガーメニューの実装<br>
 jQueryアニメーションの実装<br>
-セクション共通項目のインクルード化<br>
+共通セクションのインクルード化<br>
 <br>
 ー制作理由ー<br>
 remを使用した、フォントサイズ指定の学習<br>
@@ -42,6 +42,6 @@ Google Lighthouseを使用した、アクセシビリティーの良いページ
 <br>
 また、コーディング前に、共通スタイルをまとめ、<br>
 保守性を意識し、コーディングを行いました。<br>
-
+<br>
 ▼ 作成ページURL<br>
 https://shi-yusuke.github.io/portfolio/design_for_smile/index.html
