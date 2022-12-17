@@ -11,7 +11,7 @@ h1, h2, h3, p,
 img,
 small,
 ul, li,
-form, label, 
+fieldset, form, label, legend,
 footer, header, nav, section
 {
   margin:0;

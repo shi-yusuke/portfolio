@@ -12,7 +12,7 @@
 	<meta property="og:description" content="“働きたくなる空間”をデザインすることで人々を幸せにする。私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。">
 	<link href="./reset.css" rel="stylesheet">
 	<link href="./style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif%7CNoto+Serif+JP&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
@@ -23,51 +23,50 @@
   <main>
     <section class="container contact-wrapper">
 			<div class="contact-wrapper-inner">
-				<p class="contact-wrapper-text">Contact</p>
+				<h1 class="contact-wrapper-text">Contact</h1>
 			</div>
 			<p class="contact-wrapper-bottom contact-bottom-title js-header-trigger">Contact us</p>
 		</section>
-    <section class="container">
-			<form action="" class="form-wrapper" action="#" method="post">
-				<ul class="form-list">
-					<li class="form-item">
-						<label for="" class="form-label">お問い合わせ内容</label>
+		<form class="container form-wrapper" action="#" method="post">
+			<ul class="form-list">
+				<li class="form-item">
+					<fieldset>
+						<legend class="form-label">お問い合わせ内容</legend>
 						<ul class="checkbox-list">
 							<li class="checkbox-item">
-								<input type="checkbox" class="checkbox" name="contact-type" id="document" checked="">
 								<label for="document">資料請求</label>
+								<input type="checkbox" class="checkbox" name="contact-type" id="document" checked="">
 							</li>
 							<li class="checkbox-item">
-								<input class="checkbox" type="checkbox" name="contact-type" id="phone">
 								<label for="phone">お電話でのご相談を希望</label>
+								<input class="checkbox" type="checkbox" name="contact-type" id="phone">
 							</li>
 							<li class="checkbox-item">
-								<input class="checkbox" type="checkbox" name="contact-type" id="application">
 								<label for="application">申し込み</label>
+								<input class="checkbox" type="checkbox" name="contact-type" id="application">
 							</li>
 						</ul>
-					</li>
-					<li class="form-item">
-						<label for="" class="form-label">担当者名</label>
-						<input type="text" class="input-text" name="name" autocomplete="name">
-					</li>
-					<li class="form-item">
-						<label for="" class="form-label">電話番号</label>
-						<input type="tel" class="input-text" name="tel" autocomplete="tel">
-					</li>
-					<li class="form-item">
-						<label for="" class="form-label">メールアドレス</label>
-						<input type="text" class="input-text" name="email" autocomplete="email">
-					</li>
-					<li class="form-item">
-						<label for="" class="form-label">その他</label>
-						<textarea name="comment" class="text-area" cols="30" rows="5"></textarea>
-
-					</li>
-				</ul>
-				<input type="submit" class="btn btn-yellow" value="Submit">
-			<form>
-		</section>
+					</fieldset>
+				</li>
+				<li class="form-item">
+					<label for="name" class="form-label">担当者名</label>
+					<input type="text" class="input-text" name="name" id="name" autocomplete="name">
+				</li>
+				<li class="form-item">
+					<label for="tel" class="form-label">電話番号</label>
+					<input type="tel" class="input-text" name="tel" id="tel" autocomplete="tel">
+				</li>
+				<li class="form-item">
+					<label for="email" class="form-label">メールアドレス</label>
+					<input type="text" class="input-text" name="email" id="email" autocomplete="email">
+				</li>
+				<li class="form-item">
+					<label for="other" class="form-label">その他</label>
+					<textarea name="comment" class="text-area" id="other" cols="30" rows="5"></textarea>
+				</li>
+			</ul>
+			<input type="submit" class="btn btn-yellow" value="Submit">
+		</form>
 	</main>
   <footer class="footer"><small>©︎cresta.design all rights reserved</small></footer>
 	<script src="./js/main.js"></script>
