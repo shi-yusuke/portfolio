@@ -75,6 +75,7 @@ img{
 .header-logo{
 	padding: 0 20px;
 	margin-left: 4vw;
+	height: auto;
 }
 
 .header-logo a{
