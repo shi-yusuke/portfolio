@@ -1,8 +1,11 @@
 # portfolio
 
-
 クリスタデザイン様 より デザインカンプを使用 <br>
-https://pengi-n.co.jp/blog/coding-practice2/
+https://pengi-n.co.jp/blog/coding-practice2/<br>
+<br>
+▼ 作成ページURL<br>
+https://shi-yusuke.github.io/portfolio/design_for_smile/index.html<br>
+<br>
 
 ー制作時間ー<br>
 30時間<br>
@@ -21,8 +24,31 @@ jQueryアニメーションの実装<br>
 ー制作理由ー<br>
 remを使用した、フォントサイズ指定の学習<br>
 vwを使用したレスポンシブ対応化の学習<br>
-jQueryアニメーションの学習<br>
+入力Form、jQueryアニメーションの学習<br>
+バリデーション、アクセシビリティを意識した、コーディング練習<br>
 <br>
+
+ー工夫した点ー<br>
+「機能面」<br>
+スライドショーを横スライドではなく、フェードイン、アウトにすることで<br>
+視線を動かすことなく、オフィスデザインの全体イメージが伝わりやすくなるよう、機能を追加しました。<br>
+<br>
+ヘッダーを追従式にし、ページ内のアクセスを行いやすくしました。 <br>
+また、文字が重なるタイミングでアニメーションの切り替えを行い、<br>
+ 視認性が悪くならないように機能追加しました。<br>
+<br>
+リンクをクリックした際に、移動距離を視覚的に感じられるよう、 <br>
+スムーススクロールを実装し、ページの場所認識を行いやすいようにしました。<br>
+<br>
+「制作面」<br>
+<br>
+W3Cを使用した、バリデージョンエラーの無いコーディング、<br>
+Google Lighthouseを使用した、アクセシビリティー、SEOのスコアの 良いページの制作を心がけました。<br>
+<br>
+コーディング前に、共通スタイルをまとめ、 保守性を意識し、コーディングを行いました。<br>
+<br>
+
+
 ー工夫した点ー<br>
 <br>
 「機能面」<br>
@@ -42,5 +68,3 @@ Google Lighthouseを使用した、アクセシビリティーの良いページ
 また、コーディング前に、共通スタイルをまとめ、<br>
 保守性を意識し、コーディングを行いました。<br>
 <br>
-▼ 作成ページURL<br>
-https://shi-yusuke.github.io/portfolio/design_for_smile/index.html
