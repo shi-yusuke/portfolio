@@ -16,10 +16,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-<!-- include_header -->
-<script src="./js/include_header.js"></script>
-<script>include_header();</script>
-<!-- /include_header -->
+<header class="header">
+	<h1 class="header-logo"><a href="./index.html#"><img src="./img/logo.png" alt="Design for Smile." loading="lazy" width="198" height="36"></a></h1>
+	<div class="hamburger-trigger">
+		<button class="hamburger" aria-label="ハンバーガボタン">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="header-nav">
+			<ul class="header-nav-list">
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#concept">Concept</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#works">Works</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#service">Service</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
   <main>
     <section class="container contact-wrapper">
 			<div class="contact-wrapper-inner">

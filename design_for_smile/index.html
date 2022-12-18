@@ -12,14 +12,29 @@
 	<meta property="og:description" content="“働きたくなる空間”をデザインすることで人々を幸せにする。私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。">
 	<link href="./reset.css" rel="stylesheet">
 	<link href="./style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif%7CNoto+Serif+JP&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif%7CNoto+Serif+JP&display=swap" rel="stylesheet"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-<!-- include_header -->
-<script src="./js/include_header.js"></script>
-<script>include_header();</script>
-<!-- /include_header -->
+<header class="header">
+	<h1 class="header-logo"><a href="./index.html#"><img src="./img/logo.png" alt="Design for Smile." loading="lazy" width="198" height="36"></a></h1>
+	<div class="hamburger-trigger">
+		<button class="hamburger" aria-label="ハンバーガボタン">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="header-nav">
+			<ul class="header-nav-list">
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#concept">Concept</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#works">Works</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#service">Service</a></li>
+				<li class="header-nav-item"><a class="header-nav-link" href="./index.html#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
   <main>
     <section class="container first-view">
 			<h1 class="first-view-text js-header-trigger">Design for Smile. <br><span>快適なオフィスを<br class="d-none d-sp-block">デザインする</span></h1>
