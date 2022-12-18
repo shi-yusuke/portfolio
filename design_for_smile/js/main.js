@@ -1,7 +1,7 @@
 
 /*スマホ :hover 対策*/
 $('body')[0].setAttribute('ontouchstart', '');
-
+  
 /*ハンバーガーメニュー 処理*/
 const MenuContainer = document.querySelector('.hamburger-trigger');    
 	MenuContainer.addEventListener('click', () => {
