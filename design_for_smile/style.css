@@ -172,7 +172,7 @@ img{
 	width: 100%;
 	max-width: 1440px;
 	height: 100%;
-	background-image: url(./img/works-bgi@2x.jpg);
+	background-image: url(./img/works-bgi.png);
 }
 
 .bk-contact{
@@ -180,7 +180,7 @@ img{
 	width: 100%;
 	max-width: 1440px;
 	height: 100%;
-	background-image: url(./img/contact-bgi@2x.jpg);
+	background-image: url(./img/contact-bgi.png);
 }
 
 /* 共通セクション */
@@ -299,6 +299,7 @@ img{
 	margin: 0 20px;
 	flex-wrap: wrap;
 	background-color: #fff;
+	list-style: none;
 }
 
 .works-cord-link{
@@ -381,7 +382,7 @@ img{
 	width: 100%;
 	max-width: 1440px;
 	height: 453px;
-	background-image: url(./img/contact-page-bgi@2x.jpg);
+	background-image: url(./img/contact-page-bgi.png);
 }
 
 .contact-wrapper-text{
