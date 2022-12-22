@@ -307,7 +307,7 @@ img {
   overflow: hidden;
   width: 100%;
 }
-.mv::after {
+/* .mv::after {
   position: absolute;
   content: "";
   display: block;
@@ -318,7 +318,7 @@ img {
   height: inherit;
   background-color: #e60012;
 
-}
+} */
 
 .mv-bk {
   width: 100%;
