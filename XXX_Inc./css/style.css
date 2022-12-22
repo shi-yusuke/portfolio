@@ -311,9 +311,9 @@ img {
   position: absolute;
   content: "";
   display: block;
-  z-index: 200;
+  z-index: -200;
   bottom: -50px;
-  clip-path: polygon(100% 0, 100% 46%, 86% 80%, 0 80%, 0% 0%);
+  clip-path: polygon(100% 0%, 100% 72%, 84% 92%, 0 92%, 0% 0%);
   width: 100%;
   height: inherit;
   background-color: #e60012;
@@ -597,7 +597,7 @@ img {
     padding-top: 75px;
   } */
   .mv::after {
-    clip-path: polygon(100% 0, 100% 50%, 65% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 50%, 80% 80%, 0 80%, 0 0);
   }
  
   .mv-bk {
