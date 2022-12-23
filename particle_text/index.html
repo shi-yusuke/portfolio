@@ -19,86 +19,66 @@
         background-color: black;
         color: white;
       }
-
-      #myCanvas {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        image-rendering: pixelated; /* アンチエイリアスを無効化 */
-      }
     
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="1920" height="949" style="touch-action: none; cursor: inherit;"></canvas>
+    <canvas id="myCanvas"></canvas>
+
     <script>
       init();
 
       async function init() {
-        // パーリンノイズを初期化。
-        // ※パーリンノイズはお好みのライブラリをつかってください。
-        noise.seed(Date.now());
-
         // 画像を読み込む
         const image = new Image();
-        image.src = "img/particles_text.png";
+        image.src = "images/text_1x.png";
         await image.decode();
-
-        // PIXIのアプリケーションを作成する
-        const app = new PIXI.Application({
-          backgroundColor: 0x000000,
-          resolution: window.devicePixelRatio,
-          resizeTo: window,
-        });
-        document.body.appendChild(app.view);
-        app.view.style.width = "100%";
-        app.view.style.height = "100%";
-
-        // ドットサイズの大きさ。1は等倍。
-        // 1は綺麗だけど、TLの初期化に時間を要するのでやむなく倍化で。
-        const DOT_SIZE = 2;
 
         // 画像のサイズを算出
         const imageW = image.width;
         const imageH = image.height;
-        const lengthW = imageW / DOT_SIZE;
-        const lengthH = imageH / DOT_SIZE;
-
-        // パフォーマンスのためパーティクルコンテナーを利用
-        const container = new PIXI.ParticleContainer(lengthW * lengthH, {
-          scale: true,
-          position: true,
-          alpha: true,
-        });
-        app.stage.addChild(container);
-
-        // テクスチャーを作成
-        // テクスチャーを1枚にしていることがパフォーマンスに効果絶大
-        const texture = PIXI.Texture.from(image);
 
         // 画像をメモリ上のcanvasに転写。ピクセル値を取得するため
         const canvas = document.createElement("canvas");
         canvas.width = imageW;
         canvas.height = imageH;
-        const context = canvas.getContext("2d", { willReadFrequently: true });
+        const context = canvas.getContext("2d", {
+          // getImageData() を頻繁に読み出すためのヒント
+          willReadFrequently: true,
+        });
         context.drawImage(image, 0, 0);
+
+        // ----------------------------------------------
+        // PixiJSのセットアップ
+        // ----------------------------------------------
+
+        // PIXIのアプリケーションを作成する
+        const app = new PIXI.Application({
+          resolution: window.devicePixelRatio,
+          resizeTo: window,
+          view: document.querySelector("#myCanvas"),
+        });
+
+        // コンテナーを利用
+        const container = new PIXI.Container();
+        app.stage.addChild(container);
 
         // ----------------------------------------------
         // パーティクルの生成
         // ----------------------------------------------
-        const dots = [];
-        for (let i = 0; i < lengthW * lengthH; i++) {
-          const x = (i % lengthW) * DOT_SIZE;
-          const y = Math.floor(i / lengthW) * DOT_SIZE;
+        const dots = []; // パーティクルの保存先
 
-          const dotData = context.getImageData(
-            // 範囲の中央を利用
-            x + Math.floor(DOT_SIZE / 2),
-            y + Math.floor(DOT_SIZE / 2),
-            1,
-            1,
-          );
-          // 透過チャンネルを取得
+        const lengthW = imageW;
+        const lengthH = imageH;
+
+        for (let i = 0; i < lengthW * lengthH; i++) {
+          // カウンタ変数 i から x, y を算出
+          const x = i % lengthW;
+          const y = Math.floor(i / lengthW);
+
+          // x,y座標の画素情報を取得
+          const dotData = context.getImageData(x, y, 1, 1);
+          // 透過チャンネルを取得(0 = 赤, 1 = 緑, 2 = 青, 3 = アルファ)
           const alpha = dotData.data[3];
 
           // 透明だったらスプライトは作らないようにする
@@ -106,88 +86,51 @@
             continue;
           }
 
-          const texture2 = new PIXI.Texture(
-            texture,
-            new PIXI.Rectangle(x, y, DOT_SIZE, DOT_SIZE),
-          );
-          const dot = new Dot(texture2);
-          dot.anchor.set(0.5);
+          // パーティクルを生成
+          const dot = new PIXI.Sprite(PIXI.Texture.WHITE);
           dot.x = x - imageW / 2;
           dot.y = y - imageH / 2;
-          dot.offsetIndex = i;
+          dot.width = 1;
+          dot.height = 1;
+          dot.alpha = alpha / 255; // 元画像の透明度を適用
           container.addChild(dot);
 
+          // 配列に保存
           dots.push(dot);
         }
 
         // ----------------------------------------------
         // モーションの実装
         // ----------------------------------------------
+
         // GSAPのタイムラインを作成（各トゥイーンを集約管理するため）
-        const tl = gsap.timeline({
-          repeat: -1,
-        });
+        const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+        // 画面サイズを取得
+        const stageW = app.screen.width;
+        const stageH = app.screen.height;
 
         for (let i = 0; i < dots.length; i++) {
           const dot = dots[i];
-
-          const index = dot.offsetIndex;
-
-          // XとYを正規化 (Normalize X and Y)
-          // nx は左辺を基準に 0.0〜1.0の値をとる
-          const nx = (index % lengthW) / lengthW;
-          // ny は上辺を基準に 0.0〜1.0の値をとる
-          const ny = Math.floor(index / lengthW) / lengthH;
-
-          // パーリンノイズでパーティクルの移動座標を決める。
-          // パーリンノイズだと連続性が生まれるので、波打つ表現になる。
-          // 乗算は周期と考えてもらえばOK。
-          const px = noise.perlin2(nx * 4, ny * 3);
-          const py = noise.perlin2(nx * 3, ny * 2);
-
-          // 水平方向に遅延させるけど、ちょっとばらしている。
-          const baseDelay =
-            (dot.offsetIndex % lengthW) * 0.001 + Math.random() * 0.2;
-
-          const perlinAmpX = 1500 * (nx * 2 + 1);
-          const perlinAmpY = 500 * (nx * 2 + 1);
-          const randomAmp = 10 * (nx * 2 + 1);
-
-          const scale = (nx) * 3 + 1;
+          // パーティクルの散らかり座標を算出
+          // stageW と stageH は画面幅と画面高さ
+          const randomX = stageW * (Math.random() - 0.5);
+          const randomY = stageH * (Math.random() - 0.5);
 
           tl.from(
             dot,
             {
-              x: "-=" + (perlinAmpX * px + randomAmp * (Math.random() - 0.5)),
-              y: "-=" + (perlinAmpY * py + randomAmp * (Math.random() - 0.5)),
-              alpha: 0,
-              scaleX: scale,
-              scaleY: scale,
-              duration: 2,
+              x: randomX,
+              y: randomY,
+              duration: 4,
               ease: "expo.inOut",
             },
-            baseDelay,
-          ).to(
-            dot,
-            {
-              x: "+=" + (perlinAmpX * px + randomAmp * (Math.random() - 0.5)),
-              y: "+=" + (perlinAmpY * py + randomAmp * (Math.random() - 0.5)),
-              alpha: 0,
-              scaleX: scale,
-              scaleY: scale,
-              duration: 2.5,
-              ease: "expo.out",
-            },
-            ">2",
+            0, // 各トゥイーンは0秒地点を開始とする
           );
         }
 
-        tl.fromTo(
-          container.scale,
-          { x: 0.4, y: 0.4 },
-          { x: 0.5, y: 0.5, duration: 5, ease: "none" },
-          0,
-        );
+        // 待機時間を設ける
+        tl.add(() => {}, "+=0.5");
 
         const resize = () => {
           // コンテナーを中心に移動
@@ -197,29 +140,7 @@
         window.addEventListener("resize", resize);
         resize();
       }
-
-      /**
-       * パーティクルクラス。
-       * scaleXとscaleYを制御したいためだけに用意したクラスです。
-       */
-      class Dot extends PIXI.Sprite {
-        constructor(texture) {
-          super(texture);
-        }
-        get scaleX() {
-          return this.scale.x;
-        }
-        set scaleX(value) {
-          this.scale.x = value;
-        }
-        get scaleY() {
-          return this.scale.y;
-        }
-        set scaleY(value) {
-          this.scale.y = value;
-        }
-        offsetIndex = -1;
-      }
     </script>
+
   </body>
 </html>
