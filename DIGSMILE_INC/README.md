@@ -1,0 +1,35 @@
+
+フォルダ階層
+-css記法-<br>
+SMACSS(Scalable and Modular Architecture for CSS)<br>
+<br>
+_assets<br>
+  /scss<br>
+    -base<br>
+      //サイト全体のスタイル、ベースになるものを指定。<br>
+        _reset.scss<br>
+        _base.scss<br>
+    -layout<br>
+      //ヘッダーやフッターなど、大まかなレイアウトのルールを指定する<br>
+        _header.scss<br>
+        _footer.scss<br>
+    -module<br>
+      //BaseやLayoutよりも細かい、全ての再利用可能なパーツ<br>
+        _btn.scss<br>
+        _card.scss<br>
+    -state<br>
+      //Javascriptなどの状態によって見た目が変わる場合のスタイルを指定する<br>
+        _active.scss<br>
+<br>
+<br>
+_static<br>
+  /*ビルド後データ*/<br>
+  /dist<br>
+    /css<br>
+      style.css<br>
+    index.html
+  <br>
+  /*html元データ*/<br>
+  /src<br>
+    index.html<br>
+    <br>
