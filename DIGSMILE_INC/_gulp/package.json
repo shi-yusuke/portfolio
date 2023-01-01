@@ -11,9 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.27.11",
-    "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1"
+  },
+  "devDependencies": {
+    "css-mqpacker": "^7.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0"
   }
 }
