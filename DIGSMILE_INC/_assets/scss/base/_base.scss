@@ -4,14 +4,21 @@
 
 html {
   font-size: 62.5%;
-  width: 100vw;
+  width: calc(100vw - 15px); //縦スクロールバー横幅の差分
   overflow-x: hidden;
-  background-color: #999;
+  // background-color: #999;
 }
+
+// img,a{
+// 	user-drag: none;
+//   -webkit-user-drag: none;
+//   -moz-user-select: none;
+// }
 
 img{
   max-width: 100%;
   height: auto;
+  vertical-align:top;
 }
 
 a{

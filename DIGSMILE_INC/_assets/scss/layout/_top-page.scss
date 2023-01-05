@@ -1,0 +1,30 @@
+/* =============================================
+  top-page
+============================================= */
+.fv{
+  position: relative;
+  max-height: 740px;
+  height: 100vh;
+  top: -70px;
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: -100;
+    right: 0;
+    background-color: #222222;
+    height: inherit;
+    max-height: inherit;
+    width: 54%;
+  }
+  &-kv{
+    position: absolute;
+    // background-color: aquamarine;
+    // width: 100%;
+
+  }
+  &-logo{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+}

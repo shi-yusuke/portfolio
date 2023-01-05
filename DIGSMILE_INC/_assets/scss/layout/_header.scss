@@ -3,13 +3,13 @@
 ============================================= */
 
 .header{
-  padding: 0 1vw;
-  height: 70px;
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  z-index: 100;
+  padding: 0 4vw;
+  height: 70px;
   &-logo{
     padding: 15px;
     max-width: 260px;
@@ -21,6 +21,7 @@
 }
 .nav{
   position: absolute;
+  z-index: 80;
   top: 0;
   right: -40%;
   width: 40%;
