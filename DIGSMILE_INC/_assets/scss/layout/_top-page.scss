@@ -3,9 +3,9 @@
 ============================================= */
 .fv{
   position: relative;
-  max-height: 740px;
-  height: 100vh;
-  top: -70px;
+  max-height: 950px;
+  height: 100vw;
+  top: -60px;
   &::after{
     content: '';
     position: absolute;
@@ -16,15 +16,73 @@
     max-height: inherit;
     width: 54%;
   }
+
   &-kv{
     position: absolute;
     // background-color: aquamarine;
     // width: 100%;
-
   }
-  &-logo{
+
+  &-catch{
     position: absolute;
     top: 20%;
     right: 10%;
+  }
+}
+
+.about{
+  position: relative;
+  max-height: 607px;
+  height: 100vh;
+  margin-bottom: -160px!important;
+
+  &-img{
+    content: '';
+    position: absolute;
+    z-index: -100;
+    height: inherit;
+    max-height: inherit;
+  }
+  &__box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3vw;
+    background-color: #fff;
+    max-width: 590px;
+    max-height: 387px;
+    padding: 50px 30px;
+  }
+}
+
+.works{
+  padding-top: 120px;
+  &-img{
+    padding-bottom: 30px;
+  }
+}
+.culture{
+  padding-top: 120px;
+  &-img{
+    padding-bottom: 30px;
+  }
+}
+
+.topics{
+  &-box{
+    max-width: 700px;
+    // background-color: aqua;
+    margin-left: auto;
+  }
+  &-btn{
+    margin-left: auto;
+  }
+}
+
+.contact{
+  &-box{
+    max-width: 440px;
+    // background-color: aqua;
+
   }
 }
