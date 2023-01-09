@@ -45,16 +45,21 @@
   }
   &__box{
     position: absolute;
-    top: 50%;
+    top: calc(50%);
     transform: translateY(-50%);
-    left: 3vw;
     background-color: #fff;
     max-width: 590px;
     max-height: 387px;
     padding: 50px 30px;
+    margin: 0 20px;
   }
 }
-
+@media screen and (min-width: 375px) and (max-width: 769px) {
+  .about{
+    max-height: 479px;
+    overflow: hidden;
+  }  
+}
 .works{
   padding-top: 120px;
   margin-right: 30px;
@@ -84,6 +89,8 @@
   &-box{
     margin-right: 30px;
     max-width: 440px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     // background-color: aqua;
 
   }
