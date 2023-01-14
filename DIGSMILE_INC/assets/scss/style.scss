@@ -4,7 +4,9 @@
 @use './base/base';
 @use './layout/header';
 @use './layout/footer';
-@use './layout/top-page';
+@use './page/common';
+@use './page/top';
+@use './page/about';
 @use './modules/index';
 @use './state/active';
 @use './theme/img-size';

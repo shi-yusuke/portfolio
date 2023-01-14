@@ -1,5 +1,5 @@
 /* =============================================
-  base
+  base_base
 ============================================= */
 
 html {
@@ -19,6 +19,7 @@ img{
   max-width: 100%;
   height: auto;
   vertical-align:top;
+  pointer-events: none;
 }
 
 a{

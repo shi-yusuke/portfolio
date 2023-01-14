@@ -18,9 +18,9 @@ const imageminSvgo = require("imagemin-svgo");
 
 
 // 入出力するフォルダを指定
-const srcBase = '../_static/src';
-const assetsBase = '../_assets';
-const distBase = '../_static/dist';
+const srcBase = '../static/src';
+const assetsBase = '../assets';
+const distBase = '../static/dist';
 
 // gulpで監視対象のフォルダパスを指定
 const srcPath = {

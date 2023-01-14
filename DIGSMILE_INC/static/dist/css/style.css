@@ -1,5 +1,5 @@
 /* =============================================
-  reset
+	base_reset
 ============================================= */
 /*
 html5doctor.com Reset Stylesheet
@@ -104,7 +104,7 @@ input, select {
 }
 
 /* =============================================
-  base
+  base_base
 ============================================= */
 html {
   font-size: 62.5%;
@@ -116,6 +116,7 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: top;
+  pointer-events: none;
 }
 
 a {
@@ -123,7 +124,7 @@ a {
 }
 
 /* =============================================
-  header
+  layout_header
 ============================================= */
 .header {
   position: relative;
@@ -240,7 +241,7 @@ a {
 }
 
 /* =============================================
-  footer
+  layout_footer
 ============================================= */
 .footer {
   color: #fff;
@@ -250,12 +251,10 @@ a {
 }
 
 /* =============================================
-  top-page
+  page_common
 ============================================= */
 .fv {
   position: relative;
-  min-height: 750px;
-  height: 50vw;
   top: -60px;
 }
 .fv::after {
@@ -266,12 +265,11 @@ a {
   background-color: #222222;
   height: inherit;
   min-height: inherit;
-  width: 54%;
 }
-.fv-kv {
+.fv__img {
   position: absolute;
 }
-.fv-catch {
+.fv__catch {
   position: absolute;
   top: 20%;
   right: 5vw;
@@ -283,12 +281,13 @@ a {
   height: 100vh;
   margin-bottom: -160px !important;
 }
-.about-img {
+.about__img {
   content: "";
   position: absolute;
   z-index: -100;
   height: inherit;
   max-height: inherit;
+  overflow: hidden;
 }
 .about__box {
   position: absolute;
@@ -329,6 +328,93 @@ a {
   max-width: 440px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+/* =============================================
+  page-top
+============================================= */
+.fv-top {
+  min-height: 750px;
+  height: 50vw;
+}
+.fv-top::after {
+  content: "";
+  width: 54%;
+}
+.fv-top__img {
+  position: absolute;
+}
+.fv-top-catch {
+  position: absolute;
+  top: 20%;
+  right: 5vw;
+}
+
+.about {
+  position: relative;
+  max-height: 607px;
+  height: 100vh;
+  margin-bottom: -160px !important;
+}
+.about-img {
+  content: "";
+  position: absolute;
+  z-index: -100;
+  height: inherit;
+  max-height: inherit;
+  overflow: hidden;
+}
+.about__box {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff;
+  max-width: 590px;
+  max-height: 387px;
+  padding: 50px 30px;
+  margin: 0 20px;
+}
+.works {
+  padding-top: 120px;
+  margin-right: 30px;
+}
+.works-img {
+  padding-bottom: 30px;
+}
+
+.culture {
+  padding-top: 120px;
+}
+.culture-img {
+  padding-bottom: 30px;
+}
+
+.topics-box {
+  max-width: 700px;
+  margin-left: auto;
+}
+.topics-btn {
+  margin-left: auto;
+}
+
+.contact-box {
+  margin-right: 30px;
+  max-width: 440px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* =============================================
+  page-about
+============================================= */
+.fv-about {
+  min-height: 387px;
+  height: 10vw;
+}
+.fv-about::after {
+  content: "";
+  width: 54%;
 }
 
 .c-heading {
@@ -378,6 +464,9 @@ a {
   color: #fff;
 }
 
+/* =============================================
+  modules_container
+============================================= */
 .container {
   width: min(100% - 4rem, 1100px);
   margin-inline: auto;
@@ -390,12 +479,12 @@ a {
   padding-bottom: 60px;
 }
 /* =============================================
-  active
+  state_active
 ============================================= */
 /* =============================================
-  img-size
+  theme_img-size
 ============================================= */
-.kv-size {
+.fv-size {
   width: 76%;
   min-height: 640px;
   -o-object-fit: cover;
@@ -408,6 +497,9 @@ a {
      object-fit: cover;
 }
 
+/* =============================================
+  theme_various-parts
+============================================= */
 .d-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -456,6 +548,13 @@ a {
   .about {
     max-height: 479px;
     overflow: hidden;
+  }
+  .about {
+    max-height: 479px;
+    overflow: hidden;
+  }
+  .works {
+    margin-right: 0;
   }
   .c-heading {
     color: #333;

@@ -1,23 +1,15 @@
 /* =============================================
-  top-page
+  page-top
 ============================================= */
-.fv{
-  position: relative;
+.fv-top{
   min-height: 750px;
   height: 50vw;
-  top: -60px;
   &::after{
     content: '';
-    position: absolute;
-    z-index: -100;
-    right: 0;
-    background-color: #222222;
-    height: inherit;
-    min-height: inherit;
     width: 54%;
   }
 
-  &-kv{
+  &__img{
     position: absolute;
     // background-color: aquamarine;
     // width: 100%;
@@ -42,6 +34,7 @@
     z-index: -100;
     height: inherit;
     max-height: inherit;
+    overflow: hidden;
   }
   &__box{
     position: absolute;
@@ -59,6 +52,9 @@
     max-height: 479px;
     overflow: hidden;
   }  
+  .works{
+    margin-right: 0;
+  }
 }
 .works{
   padding-top: 120px;
