@@ -8,18 +8,6 @@
     content: '';
     width: 54%;
   }
-
-  &__img{
-    position: absolute;
-    // background-color: aquamarine;
-    // width: 100%;
-  }
-
-  &-catch{
-    position: absolute;
-    top: 20%;
-    right: 5vw;
-  }
 }
 
 .about{
@@ -44,13 +32,16 @@
     max-width: 590px;
     max-height: 387px;
     padding: 50px 30px;
-    margin: 0 20px;
+    margin: 0 60px;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 769px) {
   .about{
     max-height: 479px;
     overflow: hidden;
+    &__box{
+      margin: 0 20px;
+    }
   }  
   .works{
     margin-right: 0;

@@ -109,7 +109,6 @@ input, select {
 html {
   font-size: 62.5%;
   width: calc(100vw - 15px);
-  overflow-x: hidden;
 }
 
 img {
@@ -341,14 +340,6 @@ a {
   content: "";
   width: 54%;
 }
-.fv-top__img {
-  position: absolute;
-}
-.fv-top-catch {
-  position: absolute;
-  top: 20%;
-  right: 5vw;
-}
 
 .about {
   position: relative;
@@ -373,7 +364,7 @@ a {
   max-width: 590px;
   max-height: 387px;
   padding: 50px 30px;
-  margin: 0 20px;
+  margin: 0 60px;
 }
 .works {
   padding-top: 120px;
@@ -552,6 +543,9 @@ a {
   .about {
     max-height: 479px;
     overflow: hidden;
+  }
+  .about__box {
+    margin: 0 20px;
   }
   .works {
     margin-right: 0;
