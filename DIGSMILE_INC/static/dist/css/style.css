@@ -108,7 +108,7 @@ input, select {
 ============================================= */
 html {
   font-size: 62.5%;
-  width: calc(100vw - 15px);
+  width: 100%;
 }
 
 img {
@@ -152,11 +152,11 @@ a {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   z-index: 80;
   top: 0;
-  right: -42%;
-  width: 40%;
+  right: min(-100vw, -520px);
+  width: min(100vw, 520px);
   height: 100vh;
   padding-top: 20vh;
   background-color: #000;
@@ -400,7 +400,7 @@ a {
   page-about
 ============================================= */
 .fv-about {
-  min-height: 387px;
+  min-height: 464px;
   height: 10vw;
 }
 .fv-about::after {
@@ -475,7 +475,7 @@ a {
 /* =============================================
   theme_img-size
 ============================================= */
-.fv-size {
+.fv-top-size {
   width: 76%;
   min-height: 640px;
   -o-object-fit: cover;
@@ -484,6 +484,14 @@ a {
 
 .about-size {
   min-height: 607px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fv-about-size {
+  width: 100vw;
+  max-width: 76%;
+  height: 387px;
   -o-object-fit: cover;
      object-fit: cover;
 }

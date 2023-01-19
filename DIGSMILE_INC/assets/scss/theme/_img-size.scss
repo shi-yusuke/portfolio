@@ -1,7 +1,7 @@
 /* =============================================
   theme_img-size
 ============================================= */
-.fv-size{
+.fv-top-size{
   width: 76%;
   min-height: 640px;
   object-fit: cover;
@@ -9,5 +9,12 @@
 
 .about-size{
   min-height: 607px;
+  object-fit: cover;
+}
+
+.fv-about-size{
+  width: 100vw;
+  max-width: 76%;
+  height: 387px;
   object-fit: cover;
 }

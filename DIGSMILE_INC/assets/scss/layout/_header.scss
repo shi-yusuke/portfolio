@@ -20,11 +20,11 @@
   }
 }
 .nav{
-  position: absolute;
+  position:fixed;
   z-index: 80;
   top: 0;
-  right: -42%;
-  width: 40%;
+  right: min(-100vw,-520px);
+  width: min(100vw,520px);
   height: 100vh;
   padding-top: 20vh;
   background-color: #000;
