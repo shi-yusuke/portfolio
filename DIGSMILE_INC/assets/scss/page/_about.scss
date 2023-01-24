@@ -11,17 +11,79 @@
   }
 }
 
+.vision{
+  &__box{
+    max-width: 415px;
+    margin: auto;
+  }
+}
+
 .ceo{
   position: relative;
-    max-width: 770px;
-    background-color: #F0F0F0;
+  padding-top: 144px!important;
+
 
   &__img{
     position: absolute;
+    top: 0;
+    width: 35vw;
+  }
+  &__wrap{
+    max-width: 770px;
+    background-color: #F0F0F0;
+    margin-left: auto;
   }
   &__box{
-
     padding: 120px 185px 90px;
 
+  }
+}
+
+.company{
+  margin-left: auto;
+  &__heading{
+    border-bottom: 1px solid #ddd;
+  }
+  &__table{
+    width: 100%;
+    max-width: 809px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-bottom: 40px;
+    & tr{
+      display: flex;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      & th{
+        text-align: start;
+        width: 18%;
+      }
+      & td{
+        width: 82%;
+      }
+    }
+  }
+  &__map{
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 769px) {
+  
+  .ceo{
+    &__img{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      &__box{
+        max-width: 770px;
+        background-color: #F0F0F0;
+        margin-left: auto;
+        &__text{
+          padding: 120px 40px 90px;
+          
+        }
+      }
+    }
   }
 }
