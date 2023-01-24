@@ -408,6 +408,18 @@ a {
   width: 54%;
 }
 
+.ceo {
+  position: relative;
+  max-width: 770px;
+  background-color: #F0F0F0;
+}
+.ceo__img {
+  position: absolute;
+}
+.ceo__box {
+  padding: 120px 185px 90px;
+}
+
 .c-heading {
   color: #333;
   font-size: 3.2rem;

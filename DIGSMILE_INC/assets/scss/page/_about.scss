@@ -10,4 +10,18 @@
     width: 54%;
   }
 }
-    
+
+.ceo{
+  position: relative;
+    max-width: 770px;
+    background-color: #F0F0F0;
+
+  &__img{
+    position: absolute;
+  }
+  &__box{
+
+    padding: 120px 185px 90px;
+
+  }
+}
