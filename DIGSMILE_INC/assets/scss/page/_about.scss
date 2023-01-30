@@ -75,15 +75,29 @@
       position: absolute;
       top: 0;
       width: 100%;
-      &__box{
-        max-width: 770px;
-        background-color: #F0F0F0;
-        margin-left: auto;
-        &__text{
-          padding: 120px 40px 90px;
-          
+    }
+    &__box{
+      padding: 165px 28px 90px;
+      max-width: 770px;
+      background-color: #F0F0F0;
+      margin-left: auto;
+      
+    }
+  }
+
+  .company{
+    &__table{
+
+      & tr{
+        & th{
+          text-align: start;
+          width: 47%;
+        }
+        & td{
+          width: 53%;
         }
       }
     }
   }
+
 }

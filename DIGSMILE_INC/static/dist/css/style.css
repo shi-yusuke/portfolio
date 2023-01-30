@@ -617,13 +617,18 @@ a {
     top: 0;
     width: 100%;
   }
-  .ceo__img__box {
+  .ceo__box {
+    padding: 165px 28px 90px;
     max-width: 770px;
     background-color: #F0F0F0;
     margin-left: auto;
   }
-  .ceo__img__box__text {
-    padding: 120px 40px 90px;
+  .company__table tr th {
+    text-align: start;
+    width: 47%;
+  }
+  .company__table tr td {
+    width: 53%;
   }
   .c-heading {
     color: #333;
