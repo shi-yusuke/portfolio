@@ -1,0 +1,142 @@
+@use './mixin' as m;
+
+/* =============================================
+  layout_common
+============================================= */
+
+// 大枠となるコンテンツの幅を指定
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+
+  @include m.mq(se-sp) {
+    // sp画面横幅
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// レイヤー背景の指定等
+
+.bk-white {
+  background-color: #fff;
+}
+
+// ハンバーガーメニュー
+.c-hamburger {
+  z-index: 100;
+  position: relative;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding: 20px;
+  left: 0;
+  margin-right: 5px;
+
+  &>span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 3px;
+    border-radius: 2px;
+    background: #000;
+    width: 100%;
+
+    &:nth-of-type(1) {
+      top: 15%;
+    }
+
+    &:nth-of-type(2) {
+      top: 50%;
+    }
+
+    &:nth-of-type(3) {
+      top: 85%;
+    }
+  }
+
+
+}
+
+.c-hamburger.active {
+  &>span {
+    left: 0;
+
+    &:nth-of-type(1) {
+      top: 55%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      top: 55%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
+//ボタンデフォルト設定
+.c-btn {
+  color: #fff;
+  display: inline-flex;
+
+  min-height: 40px;
+  /* 最低限の高さ40pxを保ちつつ */
+  align-items: center;
+  /* ボタンの中身は上下中央寄せ */
+  border-radius: 30px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+}
+
+// 矢印デザイン
+.c-arrow_left,
+.c-arrow_right {
+  position: relative;
+  display: block;
+  border-radius: 40px;
+  border: 1px solid;
+  width: 57px;
+  height: 57px;
+  cursor: pointer;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 14px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.c-arrow_right {
+  &::after {
+    background-image: url(../img/icon-rightarrow-black.png);
+  }
+}
+
+.c-arrow_left {
+  &::after {
+    background-image: url(../img/icon-leftarrow-black.png);
+    top: 50%;
+    left: 50%;
+  }
+}

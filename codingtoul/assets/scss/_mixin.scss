@@ -1,0 +1,71 @@
+
+// ブレークポイント
+
+$breakpoint: (
+  pc: 'screen and (max-width: 1250px)',
+  tab: 'screen and (max-width: 768px)',
+  // sp: 'screen and (max-width: 600px)',　//状況に応じてブレークポイントを追加する
+  se-sp: 'screen and (max-width: 375px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+@mixin mqc($bpc) {
+  @media screen and (max-width: $bpc) {
+   @content;
+  }
+}
+
+// フォント設定
+
+@mixin wf($fw:normal) {
+  font-family:YuGothic, sans-serif;
+  font-weight: $fw;
+}
+
+$PATH_IMG: "../img/";
+
+// 背景画像の設定
+
+@mixin bk-img($fileName) {
+	background-image: url($PATH_IMG + $fileName);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	@content;
+}
+
+// アイコン画像の設定 
+@mixin icon($fileName, $width, $height) {
+	background: url($PATH_IMG + $fileName) no-repeat 50% 50%;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+// 疑似要素 三角アイコン設定
+
+@mixin triangle($direction, $width, $height, $color){
+	width: 0;
+	height: 0;
+	border-style: solid;
+	$valWidth: $width / 2;
+	$valHeight: $height / 2;
+	@if ($direction == top) {
+		border-width: 0 $valWidth $height $valWidth;
+		border-color: transparent transparent $color transparent;
+	} @else if ($direction == left) {
+		border-width: $valHeight $width $valHeight 0;
+		border-color: transparent $color transparent transparent;
+	} @else if ($direction == right) {
+		border-width: $valHeight 0 $valHeight $width;
+		border-color: transparent transparent transparent $color;
+	} @else if ($direction == bottom) {
+		border-width: $height $valWidth 0 $valWidth;
+		border-color: $color transparent transparent transparent;
+	}
+}
+

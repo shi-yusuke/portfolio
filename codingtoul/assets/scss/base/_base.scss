@@ -1,0 +1,56 @@
+@use './mixin' as m;
+
+/* =============================================
+  base_base
+============================================= */
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+
+// *{
+//   border: 2px solid;
+// }
+
+body{
+  // font-family: "指定フォント1", "指定フォント2", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; //デフォルトフォント設定
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  color: #222;
+}
+//サファリボタン青色対策
+button {
+  color: #222;
+}
+
+*:hover{
+  transition : all 0.4s ease 0s;
+}
+// img,a{
+// 	user-drag: none;
+//   -webkit-user-drag: none;
+//   -moz-user-select: none;
+// }
+
+// p{
+//   font-size: 1.4rem;
+//   line-height: 2.5rem;
+// }
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align:bottom;
+  pointer-events: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+a[href^="tel:"] {
+    pointer-events: none;
+    font-style: normal;
+    color: #000;
+}

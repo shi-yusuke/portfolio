@@ -1,0 +1,127 @@
+@use 'mixin' as m;
+
+/* =============================================
+  slick
+============================================= */
+
+.slick_fv{
+  position: relative;
+}
+
+.c-arrow_fv {
+  position: absolute;
+}
+
+
+.slick_fv_prev,
+.slick_fv_next {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 20px 10px;
+}
+
+.slick_fv_prev {
+  left: 10px;
+}
+
+.slick_fv_next {
+  right: 10px;
+}
+
+
+//slick、dotの設定（クラス名:slick-dots）
+.slick-dots {
+  position: absolute;
+  bottom: -30px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "●";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+
+}
+
+.slick-dots .slick-active button:before {
+  color: black;
+  opacity: 1;
+}
+
+
+
+
+.js-slick_column{
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    height: auto;
+  }
+}
+
+.js-slide_list{
+  img{
+    width: 100%;
+  }
+}
